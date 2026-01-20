@@ -1,0 +1,15 @@
+{
+  "name": "playwright-api-tests",
+  "version": "1.0.0",
+  "description": "API testing boilerplate using Playwright",
+  "scripts": {
+    "test": "playwright test",
+    "generate:types": "./scripts/generate-types.sh"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.49.1",
+    "@types/node": "^22.10.7",
+    "openapi-typescript": "^7.4.4",
+    "typescript": "^5.7.3"
+  }
+}
