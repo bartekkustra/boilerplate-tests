@@ -1,0 +1,14 @@
+{
+  "name": "cypress-api-tests",
+  "version": "1.0.0",
+  "description": "API testing boilerplate using Cypress",
+  "scripts": {
+    "test": "cypress run",
+    "test:open": "cypress open",
+    "generate:types": "./scripts/generate-types.sh"
+  },
+  "devDependencies": {
+    "cypress": "^13.17.0",
+    "typescript": "^5.7.3"
+  }
+}

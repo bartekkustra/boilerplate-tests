@@ -1,0 +1,14 @@
+{
+  "name": "cypress-ui-tests",
+  "version": "1.0.0",
+  "description": "UI testing boilerplate using Cypress",
+  "scripts": {
+    "test": "cypress run",
+    "test:open": "cypress open",
+    "test:headed": "cypress run --headed"
+  },
+  "devDependencies": {
+    "cypress": "^13.17.0",
+    "typescript": "^5.7.3"
+  }
+}
