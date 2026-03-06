@@ -8,3 +8,4 @@ Multi-framework API testing examples using JSONPlaceholder API.
 - `typescript/jestaxios/` - Jest + Axios
 - `python/robotframework/` - Robot Framework
 - `python/pytest/` - Pytest
+- `java/restassured/` - Java + REST Assured
