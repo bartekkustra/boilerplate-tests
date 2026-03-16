@@ -14,21 +14,24 @@ Available endpoints:
 
 *** Test Cases ***
 Should Create A New User
-    [Documentation]    TODO: Implement
-    Skip    Not implemented
+    ${response}=    Create User    testuser    testuser@example.com    password123
+    Status Should Be    201    ${response}
+    Set Suite Variable    ${CREATED_USER_ID}    ${response.json()}[id]
 
 Should Get All Users
-    [Documentation]    TODO: Implement
-    Skip    Not implemented
+    ${response}=    Get All Users
+    Status Should Be    200    ${response}
 
 Should Get A User By ID
-    [Documentation]    TODO: Implement
-    Skip    Not implemented
+    ${response}=    Get User    ${CREATED_USER_ID}
+    Status Should Be    200    ${response}
+    Should Be Equal    ${response.json()}[username]    testuser
 
 Should Update A User
-    [Documentation]    TODO: Implement
-    Skip    Not implemented
+    ${data}=    Create Dictionary    username=updateduser
+    ${response}=    Update User    ${CREATED_USER_ID}    ${data}
+    Status Should Be    200    ${response}
 
 Should Delete A User
-    [Documentation]    TODO: Implement
-    Skip    Not implemented
+    ${response}=    Delete User    ${CREATED_USER_ID}
+    Status Should Be    200    ${response}
